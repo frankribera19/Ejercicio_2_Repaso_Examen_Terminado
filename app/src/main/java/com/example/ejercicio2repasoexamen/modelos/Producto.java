@@ -3,11 +3,14 @@ package com.example.ejercicio2repasoexamen.modelos;
 import java.io.Serializable;
 
 public class Producto implements Serializable{
+
+    //VARIABLES
     private String nombre;
     private float precio;
     private int cantidad;
     private float total;
 
+    //CONSTRUCTORES, UNO VACIO Y EL OTRO CON TODAS LAS VARIABLES
     public Producto() {
     }
 
@@ -18,6 +21,7 @@ public class Producto implements Serializable{
         this.total = this.cantidad * this.precio;
     }
 
+    //GETTER & SETTERS DE LAS VARIABLES
     public String getNombre() {
         return nombre;
     }
@@ -50,6 +54,7 @@ public class Producto implements Serializable{
         this.total = total;
     }
 
+    //GENÉRICOS
     public void calcularTotal(){
         this.total = this.precio * this.cantidad;
     }
