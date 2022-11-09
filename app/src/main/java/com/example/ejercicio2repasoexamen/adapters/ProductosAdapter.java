@@ -123,9 +123,11 @@ public class ProductosAdapter extends RecyclerView.Adapter<ProductosAdapter.Prod
             public void onClick(DialogInterface dialogInterface, int i) {
                 if (!txtCantidad.getText().toString().isEmpty() &&
                     !txtPrecio.getText().toString().isEmpty()){
+                    MainActivity main = (MainActivity) context;
                     producto.setCantidad(Integer.parseInt(txtCantidad.getText().toString()));
                     producto.setPrecio(Float.parseFloat(txtPrecio.getText().toString()));
                     producto.calcularTotal();
+                    main.calcularTotalPrecio();
                     notifyItemChanged(position);
                 }
             }
